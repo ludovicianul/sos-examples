@@ -14,7 +14,7 @@
 				sos
 			</artifactId>
 			<version>
-				1.3-SNAPSHOT
+				1.3
 			</version>
 		</dependency>
 	</dependencies>
