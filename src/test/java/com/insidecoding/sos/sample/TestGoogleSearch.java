@@ -24,7 +24,8 @@ public class TestGoogleSearch extends AbstractSoSBase {
 		driver.get("http://google.com");
 
 		WebElement search = driver.findElement(By.name("q"));
-		search.sendKeys("What is Selenium");
+		search.sendKeys(fileUtil.getPropertyAsString("configuration",
+				"toSearch1"));
 
 		helper.waitForElementPresent(By.id("ires"), 10);
 	}
