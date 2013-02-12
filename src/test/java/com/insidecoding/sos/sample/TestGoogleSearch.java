@@ -1,5 +1,7 @@
 package com.insidecoding.sos.sample;
 
+import junit.framework.Assert;
+
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -25,9 +27,12 @@ public class TestGoogleSearch extends AbstractSoSBase {
 
 		WebElement search = driver.findElement(By.name("q"));
 		search.sendKeys(fileUtil.getPropertyAsString("configuration",
-				"toSearch1"));
+				"toSearch"));
 
+		// We use the helper in order to wait for an element to be present
 		helper.waitForElementPresent(By.id("ires"), 10);
+
+		Assert.assertTrue(helper.isTextPresentInPage("seconds"));
 	}
 
 	@Override

@@ -17,7 +17,6 @@ public class TestEmag extends AbstractSoSBase {
 
 		driver.findElement(By.xpath("//form[@id='search-global']/div[2]"))
 				.click();
-
 	}
 
 	@Override
